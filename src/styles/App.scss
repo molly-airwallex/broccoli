@@ -1,0 +1,138 @@
+@mixin animate( $property: all, $duration: 1s, $easing: ease ) {
+  -webkit-transition: $property $duration $easing;
+  -moz-transition: $property $duration $easing;
+  -o-transition: $property $duration $easing;
+  transition: $property $duration $easing;
+}
+
+$fontStack: 'Roboto', sans-serif;
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.maxHeight {
+  height: 100%;
+  min-height:100%;
+}
+
+.max {
+  height: 100%;
+  width: 100%;
+}
+
+.greedy {
+  flex: 1;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+html {
+  font-family: $fontStack;
+  @extend .maxHeight;
+}
+
+body, #root {
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0px;
+  @extend .maxHeight;
+}
+
+.main {
+  @extend .col;
+  @extend .greedy;
+  @extend .maxHeight;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+}
+
+
+.wrap {
+  min-height:100%;
+}
+
+.bodyFlex {
+  overflow:auto;
+  padding-bottom:50px;
+}
+
+.contentFlex {
+  min-height: 100%;
+  background: #EEEEEE;
+  @extend .greedy;
+};
+
+.footer {
+  border-top: 1px solid #999;
+  margin-top: -60px;
+  height: 60px;
+  clear: both;
+  text-align: center;
+  @extend .col;
+  justify-content: center;
+}
+
+.Aligner {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  padding-left:5%;
+  padding-right:5%;
+  .title {
+    font-size: 10vh;
+    line-height: 10vh;
+  }
+  .subtitle {
+    padding:20px;
+    font-size: 5vh;
+    line-height: 5vh;
+  }
+
+}
+
+.form {
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  .title {
+    font-size:50px;
+    line-height: 50px;
+    padding-bottom:10px;
+  }
+  .hr {
+    border-top: 1px solid black;
+    width:20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+    margin-bottom:60px;
+  }
+  .message {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.error {
+  margin-top:10px;
+  color:red;
+  font-size: 40px;
+  line-height: 40px;
+}
+

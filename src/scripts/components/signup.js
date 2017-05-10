@@ -1,0 +1,71 @@
+import React, { Component } from 'react';
+import { withRouter, Link } from 'react-router';
+import { connect } from 'react-redux';
+
+import Paper from 'material-ui/Paper';
+import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
+import Dialog from 'material-ui/Dialog';
+import SignUpForm from './signupForm';
+
+const customContentStyle = {
+  width: '70%'
+};
+
+export class Signup extends Component {
+
+  state = {
+    open: false,
+  };
+
+  handleOpen = () => {
+    this.setState({open: true});
+  };
+
+  handleClose = () => {
+    this.setState({open: false});
+  };
+
+  render() {
+    const actions = [
+      <FlatButton
+        label="Cancel"
+        primary={true}
+        onTouchTap={this.handleClose}
+      />,
+      <FlatButton
+        label="Submit"
+        primary={true}
+        disabled={true}
+        onTouchTap={this.handleClose}
+      />,
+    ];
+
+    return (
+      <div className="Aligner">
+        <div className="title">
+          A better way
+        </div>
+        <div className="title">
+          to enjoy every  day.
+        </div>
+        <div className="subtitle">
+          Be the first to know
+        </div>
+        <RaisedButton label="Request an invite"
+                      backgroundColor="#4dc581"
+                      labelColor="#FFFFFF"
+                      onClick={this.handleOpen} />
+        <Dialog
+          modal={false}
+          open={this.state.open}
+          onRequestClose={this.handleClose}
+          contentStyle={customContentStyle}
+        >
+          <SignUpForm onClose={this.handleClose}/>
+        </Dialog>
+      </div>
+    );
+  }
+}
+
