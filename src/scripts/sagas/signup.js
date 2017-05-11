@@ -14,7 +14,6 @@ function* signUp(action) {
   }
   try {
     let response = yield call(api, request);
-    console.dir(response)
     // On signup success, do the following tasks in parallel
     yield [
       put({type: 'SIGNUP_SUCCESS'}),

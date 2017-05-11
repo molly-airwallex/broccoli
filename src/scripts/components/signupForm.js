@@ -59,7 +59,7 @@ class SignupForm extends Component {
     });
   }
 
-  register = (e) => {
+  register(e) {
     e.preventDefault();
     let username = this.refs.name.value;
     let useremail = this.refs.email.value;
@@ -88,7 +88,7 @@ class SignupForm extends Component {
         this.props.success ?
         <div className="form">
           <div className="title">
-            Request an invite
+            ALL done !
           </div>
           <div className="hr" />
           <div className="message">
@@ -114,6 +114,7 @@ class SignupForm extends Component {
           <div>
             <Field
               name="name"
+              id="name"
               component={TextField}
               type="text"
               hintText="Full name"
@@ -129,6 +130,7 @@ class SignupForm extends Component {
           <div>
             <Field
               name="email"
+              id="email"
               component={TextField}
               type="text"
               hintText="Email"
@@ -144,6 +146,7 @@ class SignupForm extends Component {
           <div>
             <Field
               name="confirmEmail"
+              id="confirmEmail"
               component={TextField}
               type="text"
               hintText="Confirm Email"

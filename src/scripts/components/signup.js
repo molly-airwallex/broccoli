@@ -22,20 +22,6 @@ export class Signup extends Component {
   };
 
   render() {
-    const actions = [
-      <FlatButton
-        label="Cancel"
-        primary={true}
-        onTouchTap={this.handleClose}
-      />,
-      <FlatButton
-        label="Submit"
-        primary={true}
-        disabled={true}
-        onTouchTap={this.handleClose}
-      />,
-    ];
-
     return (
       <div className="Aligner">
         <div className="title">
@@ -64,3 +50,4 @@ export class Signup extends Component {
   }
 }
 
+export default Signup
