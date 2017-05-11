@@ -6,10 +6,10 @@ import {Provider} from 'react-redux';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 
-import Header from '../scripts/components/header';
-import Footer from '../scripts/components/footer';
-import SignupForm from '../scripts/components/signupForm';
-import Signup from '../scripts/components/signup';
+import Header from './header';
+import Footer from './footer';
+import SignupForm from './signupForm';
+import Signup from './signup';
 
 
 injectTapEventPlugin();

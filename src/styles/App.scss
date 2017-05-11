@@ -5,7 +5,7 @@
   transition: $property $duration $easing;
 }
 
-$break-small: 768px;
+$break-small: 368px;
 
 $fontStack: 'Roboto', sans-serif;
 
@@ -80,7 +80,7 @@ body, #root {
 
 .footer {
   display:none;
-  @media only screen and (min-width: $break-small){
+  @media only screen and (min-height: $break-small){
     display: flex;
     flex-direction: column;
     border-top: 1px solid #999;

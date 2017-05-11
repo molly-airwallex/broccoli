@@ -48,7 +48,8 @@ const styles= {
     lineHeight: "40px",
     height:"40px",
     fontSize:36
-  }
+  },
+  buttonBackground: "#4dc581",
 }
 
 class SignupForm extends Component {
@@ -97,7 +98,7 @@ class SignupForm extends Component {
             <RaisedButton
               type='submit'
               primary={true}
-              backgroundColor="#4dc581"
+              backgroundColor={styles.buttonBackground}
               style={styles.button}
               labelStyle={styles.buttonLabel}
               onClick={this.props.onClose}
@@ -163,17 +164,16 @@ class SignupForm extends Component {
             ref='submit'
             type='submit'
             primary={true}
-            backgroundColor="#4dc581"
+            backgroundColor={styles.buttonBackground}
             style={styles.button}
             labelStyle={styles.buttonLabel}
             disabled={pristine || submitting}
             label={this.props.pending ? 'Sending, please wait...' : 'Send'}
           />
-          {this.props.status ?
+          {this.props.status &&
             <div className="error">
               {this.props.status}
             </div>
-          : null
           }
         </form>
       }

@@ -1,12 +1,11 @@
 import React from 'react'
-import Main from '../scripts/containers/App'
 import {mount, shallow, render} from 'enzyme'
 import { expect } from 'chai'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
-import SignupForm from '../scripts/components/signupForm';
+import SignupForm from './signupForm';
 import Dialog from 'material-ui/Dialog';
 import sinon from 'sinon';
 

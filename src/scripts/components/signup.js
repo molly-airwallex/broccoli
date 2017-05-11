@@ -3,9 +3,16 @@ import RaisedButton from 'material-ui/RaisedButton';
 import Dialog from 'material-ui/Dialog';
 import SignUpForm from './signupForm';
 
-const customContentStyle = {
-  width: '70%'
-};
+
+const styles = {
+  customContentStyle: {
+    width: '70%'
+  },
+  button: {
+    background: "#4dc581",
+    label: "#FFFFFF"
+  }
+}
 
 export class Signup extends Component {
 
@@ -33,15 +40,16 @@ export class Signup extends Component {
         <div className="subtitle">
           Be the first to know
         </div>
-        <RaisedButton label="Request an invite"
-                      backgroundColor="#4dc581"
-                      labelColor="#FFFFFF"
-                      onClick={this.handleOpen} />
+        <RaisedButton
+          label="Request an invite"
+          backgroundColor={styles.button.background}
+          labelColor={styles.button.label}
+          onClick={this.handleOpen} />
         <Dialog
           modal={false}
           open={this.state.open}
           onRequestClose={this.handleClose}
-          contentStyle={customContentStyle}
+          contentStyle={styles.customContentStyle}
         >
           <SignUpForm onClose={this.handleClose}/>
         </Dialog>
