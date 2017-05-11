@@ -28,4 +28,10 @@ To use webpack dev server & watch,
     $ npm start
 ```
 
+To test
+
+```bash
+    $ npm test
+```
+
 Listens at **http://localhost:9001**

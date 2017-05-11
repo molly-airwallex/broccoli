@@ -7,7 +7,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import configureStore from './store.js';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import style from '../styles/App.scss';
-import App from './containers/App'
+import Main from './containers/App'
 
 injectTapEventPlugin();
 export const store = configureStore();
@@ -18,7 +18,7 @@ ReactDOM.render(
     <MuiThemeProvider >
       <div className="main">
         <Router history={history}>
-          <Route path='/' component={App} />
+          <Route path='/' component={Main} />
         </Router>
       </div>
     </MuiThemeProvider>
