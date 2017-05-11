@@ -16,6 +16,13 @@ To build on development mode, generates a minified version with source map.
     $ npm run build
 ```
 
+To use webpack dev server & watch,
+
+```bash
+    $ npm start
+```
+Listens at **http://localhost:9001**
+
 To build on production mode
 
 ```bash
@@ -34,4 +41,3 @@ To test
     $ npm test
 ```
 
-Listens at **http://localhost:9001**
