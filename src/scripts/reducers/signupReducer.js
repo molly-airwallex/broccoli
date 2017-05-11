@@ -5,7 +5,6 @@ const initialState = {
   error: false,
 }
 
-
 function createReducer(initialState, reducerMap) {
   return (state = initialState, action) => {
     const reducer = reducerMap[action.type];
@@ -14,7 +13,6 @@ function createReducer(initialState, reducerMap) {
       : state;
   };
 }
-
 
 export default createReducer(initialState, {
   'SIGNUP': (state, payload) => {
