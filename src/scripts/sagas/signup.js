@@ -4,8 +4,6 @@ import { push } from 'react-router-redux';
 
 function* signUp(action) {
   let p = action.payload; // Shortcut for payload
-  console.log('SIGNING UP');
-  console.dir(p);
   const request = {
     endpoint: 'https://l94wc2001h.execute-api.ap-southeast-2.amazonaws.com/prod/fake-auth',
     method: 'POST',

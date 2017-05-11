@@ -59,23 +59,33 @@ class SignupForm extends Component {
     });
   }
 
-  register = (e, values) => {
+  register = (e) => {
     e.preventDefault();
-    this.props.dispatch({
-      type: 'SIGNUP_REQUEST',
-      payload: {
-        name: this.refs.name.value,
-        email: this.refs.email.value
-      }
-    })
+    let username = this.refs.name.value;
+    let useremail = this.refs.email.value;
+    let confirm = this.refs.confirmEmail.value;
+    if(required(username) || required(useremail) || required(confirm)
+      || name(username)   || email(useremail) || useremail !== confirm
+      ){
+      //form is invalid
+    } else {
+      this.props.dispatch({
+        type: 'SIGNUP_REQUEST',
+        payload: {
+          name: username,
+          email: useremail
+        }
+      })
+    }
+
   }
 
   render() {
-    const { pristine, submitting } = this.props;
+    const { error, pristine, submitting } = this.props;
     return (
       <div>
       {
-        !this.props.success ?
+        this.props.success ?
         <div className="form">
           <div className="title">
             Request an invite

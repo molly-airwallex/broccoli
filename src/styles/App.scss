@@ -5,6 +5,8 @@
   transition: $property $duration $easing;
 }
 
+$break-small: 768px;
+
 $fontStack: 'Roboto', sans-serif;
 
 input:-webkit-autofill {
@@ -77,13 +79,17 @@ body, #root {
 };
 
 .footer {
-  border-top: 1px solid #999;
-  margin-top: -60px;
-  height: 60px;
-  clear: both;
-  text-align: center;
-  @extend .col;
-  justify-content: center;
+  display:none;
+  @media only screen and (min-width: $break-small){
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #999;
+    margin-top: -60px;
+    height: 60px;
+    clear: both;
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 .Aligner {
